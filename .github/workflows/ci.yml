@@ -9,8 +9,10 @@ on:
    push request:
      branches:   
        -main        
+
 env: 
 node_version: 18
+secrets: ${{secrets.MY_SECRET}}
 
 jobs:
   my_build:
