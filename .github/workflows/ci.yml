@@ -8,15 +8,17 @@ on:
 on:
    push request:
      branches:   
-       -main
+       -main        
+env: 
+node_version: 18
 
-   jobs:
-     My_build:
-       runs-on: ubuntu-latest
-       steps:
-         -name: checkout code 
-         uses: action/checkout@v3
-         -name: use node version
-         uses: action/setup-node@v3
-         with:
-           node-version: 17
+jobs:
+  my_build:
+  runs-on: ubuntu-latests
+  steps:   
+    -name: checkout code
+    uses: action/checkout@v3
+    -name: use node_version
+    uses: action/setup-node@v3
+    with:
+      node-node_version: ${{env,node_version}}     
