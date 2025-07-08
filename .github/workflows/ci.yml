@@ -14,6 +14,17 @@ env:
 node_version: 18
 secrets: ${{secrets.MY_SECRET}}
 
+ main
+   jobs:
+     my_build:
+       runs-on: ubuntu-latest:  
+       steps:
+         -name: checkout code 
+         uses: actions/checkout@v3
+         -name: use node version
+         uses: actions/setup-node@v3
+         with:
+         node-version: 17
 jobs:
   my_build:
   runs-on: ubuntu-latests
@@ -24,3 +35,4 @@ jobs:
     uses: action/setup-node@v3
     with:
       node-node_version: ${{env,node_version}}     
+ prrpare.html
