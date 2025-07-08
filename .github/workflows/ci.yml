@@ -8,8 +8,13 @@ on:
 on:
    push request:
      branches:   
-       -main
+       -main        
 
+env: 
+node_version: 18
+secrets: ${{secrets.MY_SECRET}}
+
+ main
    jobs:
      my_build:
        runs-on: ubuntu-latest:  
@@ -20,3 +25,14 @@ on:
          uses: actions/setup-node@v3
          with:
          node-version: 17
+jobs:
+  my_build:
+  runs-on: ubuntu-latests
+  steps:   
+    -name: checkout code
+    uses: action/checkout@v3
+    -name: use node_version
+    uses: action/setup-node@v3
+    with:
+      node-node_version: ${{env,node_version}}     
+ prrpare.html
