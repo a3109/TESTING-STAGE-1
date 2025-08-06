@@ -1,0 +1,14 @@
+name: Hello World on Commit
+
+on:
+  push:
+    branches:
+      - main  # Run only when pushing to the main branch
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, World! A commit was made to the main branch."
