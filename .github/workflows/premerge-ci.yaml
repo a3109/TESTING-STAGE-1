@@ -10,13 +10,13 @@ on:
       -main
 
   jobs:
-    my_build:
+     My_build:
       runs-on: ubuntu-latest
       step:
       -name: checkout code 
-      uses: action/checkout@v3
+      uses: actions/checkout@v3
       -name: checkout node version
-      uses: action/setup-node@v3
+      uses: actions/setup-node@v3
       with:
          node-version: 17
     
