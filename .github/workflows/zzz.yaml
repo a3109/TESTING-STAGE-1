@@ -1,4 +1,4 @@
-name: Hello World
+name: my first Hello World
 
 on:
   workflow_dispatch:  # This allows manual triggering from GitHub Actions tab
