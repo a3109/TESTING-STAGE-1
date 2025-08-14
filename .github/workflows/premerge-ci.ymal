@@ -1,8 +1,10 @@
+# File: .github/workflows/hello-world.yml
+
 name: Hello World Workflow
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -10,8 +12,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Print Hello World
+      - name: Print greeting
         run: echo "Hello, World!"

@@ -1,0 +1,19 @@
+
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main  # Run workflow only when PR targets the 'main' branch
+    types: [opened, synchronize, reopened]
+
+jobs:
+  run-on-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Say Hello on PR
+        run: echo "Hello! This workflow runs on Pull Requests to the main branch."

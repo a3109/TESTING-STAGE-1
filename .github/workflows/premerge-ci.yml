@@ -1,0 +1,24 @@
+name: first_github-action_workflow
+
+on:
+  pull_request:
+     branches:
+      -main
+
+on:
+  push_request:
+     branches:
+      -main 
+      
+     jobs:         
+       my_build:
+         runs-on: ubuntu-latest
+         steps:
+           -name: checkout code
+           uses: action/checkout@v3
+           -name: checkout node version
+           uses: action/setup-node@v3
+           with:
+             node-version: 17
+
+               
